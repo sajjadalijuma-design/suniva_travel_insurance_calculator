@@ -8,7 +8,6 @@ def connect_database(db_path):
     """
     Connect to the SQLite database.
     """
-    os.makedirs(os.path.dirname(db_path), exist_ok=True)
     sqlite3.connect(str(db_path))
     return sqlite3.connect(str(db_path))
 
