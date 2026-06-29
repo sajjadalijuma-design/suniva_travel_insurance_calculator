@@ -1,5 +1,4 @@
 import sqlite3
-import os
 import bcrypt
 
 db_path = r"\DATA\users.db"
