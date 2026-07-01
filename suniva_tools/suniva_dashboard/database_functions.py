@@ -2,14 +2,7 @@ import sqlite3
 import bcrypt
 import os
 
-db_folder = "DATA"
-db_file = "users.db"
-db_path = os.path.join(db_folder, db_file)
-
-# Make sure the folder exists
-os.makedirs(db_folder, exist_ok=True)
-
-print(f"Database path: {os.path.abspath(db_path)}")
+db_path = "users.db"
 
 def connect_database(db_path):
     """
@@ -54,4 +47,5 @@ def add_user(db_path, username, password):
     finally:
         conn.close()
 
+create_users_table(db_path)
 add_user(db_path, "admin", "admin1234")
