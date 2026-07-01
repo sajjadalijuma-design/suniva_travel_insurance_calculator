@@ -1,0 +1,1 @@
+add_user(db_path, "admin", "admin1234")
