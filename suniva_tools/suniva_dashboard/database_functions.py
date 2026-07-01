@@ -23,7 +23,7 @@ def create_users_table(db_path):
         CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             username TEXT UNIQUE NOT NULL,
-            password_hash TEXT NOT NULL
+            password_hash BLOB NOT NULL
         )
     ''')
     conn.commit()
