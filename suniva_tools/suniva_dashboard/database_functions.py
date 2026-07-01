@@ -49,5 +49,3 @@ def add_user(db_path, username, password):
     finally:
         conn.close()
 
-create_users_table(db_path)  # Ensure the users table exists when the module is imported
-add_user(db_path, "admin", "admin123")  # Add a default admin user
