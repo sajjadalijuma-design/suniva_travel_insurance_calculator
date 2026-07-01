@@ -2,7 +2,7 @@ import sqlite3
 import bcrypt
 from pathlib import Path
 
-db_path = Path("DATA") / "intelligence_platform.db"
+db_path = Path("DATA") / "users.db"
 db_path.parent.mkdir(exist_ok=True)  # creates DATA if missing
 
 
@@ -49,3 +49,5 @@ def add_user(db_path, username, password):
     finally:
         conn.close()
 
+create_users_table(db_path)  # Ensure the users table exists when the module is imported
+add_user(db_path, "admin", "admin123")  # Add a default admin user

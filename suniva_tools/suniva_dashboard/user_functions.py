@@ -2,7 +2,7 @@ import bcrypt
 from pathlib import Path
 from database_functions import connect_database
 
-db_path = Path("DATA") / "intelligence_platform.db"
+db_path = Path("DATA") / "users.db"
 db_path.parent.mkdir(exist_ok=True)  # creates DATA if missing
 
 def get_user_by_username(username):
